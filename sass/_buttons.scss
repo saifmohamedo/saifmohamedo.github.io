@@ -1,0 +1,35 @@
+/* --------------------------------------------------------------------------------------
++
++ BUTTONS
++
+-------------------------------------------------------------------------------------- */
+
+.btn {
+    text-align: center;
+    color: $btn-clr;
+    background: $btn-bgr;
+    border: none;
+    @include radius;
+    @include transition(all .3s ease);
+    font-family: $title-font;
+    @include lh(30px);
+    @include background-clip();
+    @include box-shadow(0 1px 1px #b70245);
+    text-transform: uppercase;
+    padding: 0 20px;
+    font-size: 14px;
+    font-weight: bold;
+    &:hover {
+        background: $btn-hover;
+        color: #fff;
+    }
+
+    // &.small {  }
+
+    // &.medium {  }
+
+    &.large_btn {
+        @include lh(40px);
+        display: inline-block;
+    }
+}

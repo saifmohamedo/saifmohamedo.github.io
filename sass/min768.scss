@@ -1,0 +1,370 @@
+/* --------------------------------------------------------------------------------------
++
++ Queries (min-width: 768px)
++
+-------------------------------------------------------------------------------------- */
+@import "variables";
+@import "mixins";
+@import "compass";
+
+
+@media (min-width: 768px) {
+	$base-font-size: 14px;
+	h1 {
+		font-size: 40px;
+	}
+	h2 {
+		font-size: 24px;
+	}
+	.container {
+		width: 96%;
+	}
+	header {
+		height: 650px;
+		@include background(image-url('header_bgr_md.jpg', false, false) no-repeat 50% 0);
+		.signin {
+			padding-top: 90px;
+			span {
+				display: inline-block !important;
+				margin-right: 20px;
+			}			
+		}		
+		nav {
+			display: block;
+			width: auto;
+			top: 25px;
+			left: auto;
+			margin-left: 0;
+			right: 2%;
+			height: 41px;
+			z-index: 1000;
+			&.fixed {
+				position: absolute;
+				background-color: #fff;
+				top: 25px;
+			}
+			span {
+				display: none;
+			}
+			ul {
+				@include opacity(1);
+				visibility: visible;	
+				height: auto;
+				padding: 1px 20px 1px;
+				// overflow: hidden;
+				font-size: 0;
+				@include border-radius($radius);
+				li {
+					position: relative;
+					@include opacity(1);
+					visibility: visible;	
+					border-top: none;
+					font-size: $base-font-size + 2px;
+					display: inline-block;
+					padding: 0 10px;
+					&:first-child {
+						padding-left: 0;
+					}
+					&:last-child {
+						padding-right: 0;
+					}
+					&:hover {
+						&:before {
+							visibility: visible;
+							@include opacity(1);
+						}
+					}
+					&:before {
+						content: '';
+						position: absolute;
+						top: -15px;
+						width: 54px;
+						height: 28px;
+						display: block;
+						@include t(.4s);
+						visibility: hidden;
+						@include opacity(0);
+						@include background(image-url('nav_bgr.png', false, false) no-repeat 0 0);
+						left: 50%;
+						z-index: -1;
+						.ie8 & {
+							visibility: visible;
+							@include opacity(1);
+							z-index: 10;
+							display: none;
+						}
+					}
+				}		
+			}
+		}
+		.register {
+			text-align: left;
+			padding: 25px;
+			left: 0;
+			margin-left: 0;
+			right: 316px;
+			width: auto;
+			top: 200px;
+			@include border-radius($radius 0 0 $radius);
+			h1 {
+				font-size: 50px;
+			}
+			h2 {
+				font-size: 34px;
+			}
+			p {
+				margin-bottom: $space;
+			}
+		}		
+	}
+	#get_theme {
+		.container {
+			text-align: center;
+			h1 {
+				font-size: $base-font-size;
+			}
+			& > * {
+				margin: 0 15px;
+				display: inline-block;
+			}
+		}
+	}
+	#about {
+		@include background(image-url('bubles.png', false, false) no-repeat 50% 50%);
+	}
+	.hide-on-wide {
+		display: none;
+	}
+	#search {
+		position: absolute;
+		left: 0;
+		top: 145px;
+		width: 100%;
+		background-color: transparent;
+		padding: 0;
+		.container {
+			position: relative;
+			overflow: hidden;
+			&>div {
+				float: right;
+				height: auto;
+				width: 300px;
+				@include border-radius(5px);
+				@include background-clip();
+				background-color: #f3f6f7;
+				@include box-shadow(1px 2px 2px #a8a8a8);
+				padding: 20px;
+				@include bs;
+				text-align: left;
+			}
+		}
+	}
+	#member {
+		.container {
+			position: relative;
+		}
+	}
+	.flexslider {
+		width: 90%;
+		margin: 0 auto;
+		.flex-direction-nav {
+			a {
+				position: absolute;
+				top: 50%;
+				margin-top: -16px;
+			}
+		}
+	    .flex-prev  {
+	    	left: 0;
+	    }
+	    .flex-next  {
+	    	right: 0;
+	    }		
+	}
+	#testemonials {
+		ul {
+			font-size: 0;
+		}
+		li {
+			font-size: $base-font-size;
+			width: 33.33%;
+			padding: 150px 11px 11px;
+			@include bs;
+			vertical-align: top;
+			display: inline-block;
+			margin-top: 0;
+			overflow: hidden;
+			&:nth-child(odd) {
+				* {
+					@include translate(0, 1000px);
+				}
+			}
+			&:nth-child(even) {
+				* {
+					@include translate(0, 1000px);
+				}
+			}
+			&.visible {
+				&:nth-child(odd) {
+					* {
+						@include translate(0, 0);
+					}
+				}
+				&:nth-child(even) {
+					* {
+						@include translate(0, 0);
+					}
+				}
+				&:first-child {
+					@include transition(all .6s ease .5s);
+					* {
+						@include transition(all .6s ease .1s);
+					}
+				}
+				&:nth-child(2) {
+					@include transition(all .6s ease .9s);
+					* {
+						@include transition(all .6s ease .5s);
+					}
+				}
+				&:nth-child(3) {
+					@include transition(all .6s ease 1.3s);
+					* {
+						@include transition(all .6s ease .9s);
+					}
+				}
+
+			}			
+		}
+	}
+	#get_theme {
+		.wraper {
+			h1 {
+				@include translate(-5000px, 0);
+			}
+			a {
+				@include translate(5000px, 0);
+			}			
+		}
+	}
+	.tabs {
+		&>ul {
+			margin-bottom: 0;
+			text-align: left;
+			font-size: 0;
+			li {
+				margin-top: 0;
+				display: inline-block;
+				margin-right: 10px;
+				&.active, &:hover {
+					position: relative;
+					z-index: 100;
+					a {
+						border-color: $border2;
+						border-bottom: 2px solid #fff;
+						&:hover {
+							border-bottom: 2px solid #fff;
+						}
+					}
+					& + li {
+						a {
+							border-top: 2px solid $border2;
+						}
+					}					
+				}
+				&:hover {
+					a {
+						&:hover {
+							border-bottom: 2px solid $border2;
+						}
+					}
+				}
+				&.active:hover {
+					a {
+						&:hover {
+							border-bottom: 2px solid #fff;
+						}
+					}
+				}
+				a {
+					min-width: inherit;
+					padding: 0 18px;
+					margin: 0;
+					width: auto;
+					font-size: 14px;
+					@include border-radius($radius $radius 0 0);
+					border: 2px solid $border2;
+					&:hover {
+						border-color: $border2;
+					}
+				}
+			}
+		}
+		.tab-item {
+			margin-top: -2px;
+			@include border-radius(0 $radius $radius $radius);
+			.disc {
+				li:before {
+					top: 7px;
+				}
+			}
+		}
+	}
+	#contact {
+		.input, .textarea {
+			width: 49%;
+			float: left;
+			input, textarea {
+				max-width: none;
+				width: 100%;
+			}
+		}
+		.textarea {
+			float: right;
+			textarea {
+				min-height: 128px;
+				// height: 120px;
+			}
+		}
+		.btn {
+			float: right;
+			padding: 0 30px;
+		}
+	}
+	footer {
+		overflow: hidden;
+		.social {
+			float: right;
+			li {
+				margin-bottom: 0;
+			}
+		}
+		small {
+			float: left;
+			padding-top: 18px;
+		}
+	}
+}
+
+@media (min-width: 960px) {
+	.container {
+		padding: 0;
+		width: 960px;
+	}
+	header {
+		@include background(image-url('header_bgr_lg.jpg', false, false) no-repeat 50% 0);
+		@include background-size(cover);
+		-ms-behavior: url(../js/backgroundsize.htc);
+		nav {
+			right: 0;
+			ul {
+				li {
+					padding: 0 20px;
+				}
+			}
+		}
+		.register {
+			right: 300px;
+		}
+	}
+}

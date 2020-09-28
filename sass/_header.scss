@@ -1,0 +1,207 @@
+/* --------------------------------------------------------------------------------------
++
++ HEADER
++
+-------------------------------------------------------------------------------------- */
+header  {
+	background-color: $header-bgr;
+	height: 506px;
+	@include background(image-url('header_bgr_xs.jpg', false, false) no-repeat 50% 0);
+	border-top: 3px solid $border;
+	@include bs;
+	#logo {
+		width: 130px;
+		height: 117px;
+		display: block;
+		@include background(image-url('logo.png', false, false) no-repeat 50% 0);
+		float: left;
+		margin-top: -3px;
+	}
+	.signin {
+		float: right;
+		padding-top: 25px;
+		li {
+			float: left;
+			& + li {
+				margin-left: 20px;
+			}
+			span {
+				display: none;
+			}
+		}
+		a {
+			font-size: 14px;
+			font-family: $title-font;
+			color: #176278;
+			font-weight: bold;	
+			text-transform: uppercase;
+			&:hover {
+				color: #fff;
+				@include text-shadow(0 1px 0 #075973);
+			}
+		}	
+	}	
+	nav {
+		background-color: #fff;
+		@include radius;
+		height: 39px;
+		position: absolute;
+		width: 96%;
+		@include bs;
+		top: 133px;
+		left: 50%;
+		margin-left: -48%; 
+		font-family: $title-font;
+		font-weight: bold;
+		padding: 4px;
+		cursor: pointer;
+		z-index: 1000;
+		&.fixed {
+			position: fixed;
+			top: 0;
+			background-color: #007ba2;
+			z-index: 10000;
+			span {
+				background-color: #fff;
+			}
+		}
+		& * {
+			font-size: 14px;
+			text-transform: uppercase;
+		}
+		&:hover {
+			span {
+				background-color: #007ba2;
+				color: #c5c5c5;
+				background-position: 100% -100px;
+			}
+		}
+		span {
+			color: #176178;
+			@include lh(31px);
+			display: block;
+			padding: 0 20px;
+			position: relative;
+			&:hover {
+				color: #fff;
+				b {
+					background-position: 0 -8px;
+				}
+			}
+			&.active {
+				background-color: #007ba2;
+				color: #c5c5c5;
+				background-position: 100% -100px;
+				b {
+					background-position: 0 -8px;
+				}
+			}
+			b {
+				position: absolute;
+				top: 50%;
+				margin-top: -2px;
+				height: 8px;
+				width: 16px;
+				display: block;
+				right: 20px;
+				@include background(image-url('arrow_nav.png', false, false) no-repeat 0 0);
+				@include transition(none);
+			}
+		}
+		ul {
+			padding: 3px 20px 1px;
+			background-color: #007ba2;
+			display: block;
+			@include opacity(0);
+			visibility: hidden;
+			@include border-radius(0 0 $radius $radius);
+			height: 0;
+			@include transition(all .01s ease);
+			.ie8 & {
+				@include opacity(1);
+				visibility: visible;
+			}
+			&.active {
+				@include opacity(1);
+				visibility: visible;
+				height: auto;
+				@include transition(all .2s ease);
+
+				li {
+					@include opacity(1);
+					visibility: visible;
+					@include transition(all .3s ease .1s);
+					
+				}
+			}
+			li {
+				border-top: 2px solid #006c8e;
+				@include opacity(0);
+				visibility: hidden;
+				@include transition(all .01s ease);
+				.ie8 & {
+					@include opacity(1);
+					visibility: visible;
+				} 
+			}
+			a {
+				color: #c5c5c5;
+				@include lh(30px);
+				display: block;
+				&:hover {
+					color: #fff;
+				}
+			}
+		}
+	}
+	.register {
+		text-align: center;
+		width: 96%;
+		left: 50%;
+		margin-left: -48%; 
+		background-color: #227da5;
+		background-color: rgba(0, 123, 162, .7);
+		padding: 25px 12px;
+		@include bs;
+		position: absolute;
+		top: 196px;
+		@include border-radius($radius);
+		z-index: 10;
+		* {
+			color: #fff;
+		}
+		h1 {
+			margin-bottom: 0;
+			font-size: 30px;
+			font-weight: 400;
+			line-height: 1.2;
+			@include text-shadow(0 2px 2px rgba(8,90,115,.75));
+		}
+		h2 {
+			line-height: 1.2;
+			font-weight: 300;
+			font-family: $title-font;
+			@include text-shadow(0 2px 2px rgba(8,90,115,.75));
+		}
+		h2, p {
+			margin-bottom: 10px;
+		}
+		p {
+			font-weight: 300;
+			font-size: 16px;
+		}
+		.btn {
+			@include border-radius($radius);
+			@include background-clip();
+			background-color: #f30e63;
+			@include box-shadow(0 1px 1px #b70245);
+			@include background-image(linear-gradient(bottom, #f30d63 0%, #f30d63 1.29%, #f75d96 100%));
+			white-space: nowrap;
+			&:hover {
+				@include background-image(linear-gradient(top, #f30d63 0%, #f30d63 1.29%, #f75d96 100%));
+				
+			}		
+		}
+	}
+}
+

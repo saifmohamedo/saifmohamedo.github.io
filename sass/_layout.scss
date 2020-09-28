@@ -1,0 +1,28 @@
+/* --------------------------------------------------------------------------------------
++
++ LAYOUT
++
+-------------------------------------------------------------------------------------- */
+
+@import "compass/layout.scss";
+
+// @include sticky-footer(80px, ".layout", ".layout_footer", "footer");
+
+
+.container {
+    margin: 0 auto;
+    width: $page-width;
+    padding: 0 2%; 
+    @include bs;
+    position: relative;
+}
+
+.left {
+	float: left;
+	
+}
+
+.right {
+	float: right;
+	
+}

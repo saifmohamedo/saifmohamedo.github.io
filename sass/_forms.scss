@@ -1,0 +1,107 @@
+/* --------------------------------------------------------------------------------------
++
++ FORMS
++
+-------------------------------------------------------------------------------------- */
+
+/* MAIN PART */
+
+input[type="text"], input[type="email"], input[type="password"], textarea {
+	vertical-align: middle;
+	color: $input-clr;
+	background-color: $input-bgr;
+	padding: 0 20px;
+	@include transition(all .4s ease);
+	@include radius;
+    font-family: $base-font;
+    width: 100%;
+    @include lh(36px);
+    @include bs;
+	border: 2px solid $border2;
+    @include box-shadow(none);
+    font-size: 14px;
+	&:hover, &:focus {
+		background-color: #fff;
+		border: 2px solid $border;
+	}
+	&.placeholder {
+		color: #c5c5c5;
+	}
+    &.error {
+        border: 2px solid #ff605a;
+        color: #ff605a;
+    }    
+}
+
+input {
+    max-width: 364px;
+    display: block;
+    #contact & {
+        margin: 0 auto 10px;
+    }
+}
+
+textarea {
+    min-height: 137px;
+    resize: none; 
+    max-width: 364px; 
+    margin: 0 auto;
+    @include bs;
+    display: block;
+    #contact & {
+        margin-bottom: 10px;
+    }
+}
+
+
+/*hack for opera*/
+x:-o-prefocus, textarea {
+    padding-top: 5px;
+}
+
+
+input[type="radio"] {
+    display:none !important;
+} 
+
+.radio {
+    font-size: 14px;
+    display: inline-block;
+    margin-left: 10px;
+    &:first-of-type {
+    	margin-right: 0;
+    }
+}
+
+.radio span {
+    display:inline-block;
+    width:30px;
+    height:39px;
+    margin: 1px 10px 0 0;
+    vertical-align: middle;
+    @include background(image-url('boy.png', false, false) no-repeat 0 0);
+    cursor:pointer;
+    @include transition(none);
+    &.girl {
+        width: 16px;
+        @include background(image-url('girl.png', false, false) no-repeat 0 0);
+    }
+}
+ 
+
+.input, .textarea {
+    position: relative;
+}
+
+label {
+    &.error {
+        right: 10px;
+        color: $base-clr;
+        position: absolute;
+        margin-top: -32px;
+    }
+}
+
+// #dialog {
+//     display: none;
+// }

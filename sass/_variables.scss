@@ -1,0 +1,50 @@
+/* --------------------------------------------------------------------------------------
++
++ VARIABLES
++
+-------------------------------------------------------------------------------------- */
+
+//GLOBAL VARIABLES
+
+$experimental-support-for-svg:          true;
+
+//Basic colors
+$base-clr:                            	#f40e63;
+$header-bgr:                            #fff;
+$footer-bgr:							#444;
+$base-font:                             'Roboto', sans-serif;
+$title-font:                            'Roboto Slab', serif;
+$subtitle-font:                         'Damion', cursive;
+
+$base-font-size:                        12px;
+$base-line-height:                      1.5;
+
+$text-clr: 								#5e5e5b;
+$second-clr:							#0e5f78;
+$title-clr:								#f40e63;
+$link-clr:								#c5c5c5;
+$link-hover:							#777;
+
+$border:								#075c76;
+$border2:								#d8dee0;
+
+$footer-clr:							#fff;
+
+$input-clr:								#5e5e5b;
+$input-bgr:								#fff;
+
+$btn-clr:								#fff;
+$btn-bgr:								$base-clr;
+$btn-hover:								#d0004c;
+
+
+//LAYOUT
+$space:                          		20px;
+$page-width:                            100%;
+$radius:								5px;
+
+
+//SELECT TEXT
+$selected-text-bgr:						#000;
+$selected-text-clr:						#fff;
+

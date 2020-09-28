@@ -1,0 +1,72 @@
+/* --------------------------------------------------------------------------------------
++
++ FLEXSLIDER
++
+-------------------------------------------------------------------------------------- */
+
+/* FlexSlider Necessary Styles
+*********************************/
+.flexslider {
+    margin: 0; 
+    padding: 0;
+}
+.flexslider .slides > li {
+    display: none; 
+    -webkit-backface-visibility: hidden;
+    i {
+        width: 140px;
+        margin: 0 auto;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        display: block;
+        font-style: italic;
+        border-top: 2px solid #fff;
+        font-size: 14px;
+    }
+} /* Hide the slides before the JS is loaded. Avoids image jumping */
+
+.flexslider .slides img {width: 100%; display: block;}
+.flex-pauseplay span {text-transform: capitalize;}
+
+/* Clearfix for the .slides element */
+.slides:after {content: "\0020"; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
+html[xmlns] .slides {display: block;}
+* html .slides {height: 1%;}
+
+.flex-direction-nav {
+    text-align: center;
+    li {
+        display: inline-block;
+        margin: 0 15px;
+        vertical-align: top;
+    }
+    a {
+        @include ht;
+        @include box(33px);
+        cursor: pointer;
+        @include bs;
+        @include opacity(.5);
+        border: 4px solid #fff;
+        @include border-radius(17px);
+        @include background-clip();
+        @include background(#d7dddf image-url('arrows.png', false, false) no-repeat -5px -4px);     
+        text-indent: -9999px;
+        &:hover {
+            @include opacity(1);
+            @include background(#97b1b1 image-url('arrows.png', false, false) no-repeat -5px -4px);
+        }
+    }
+    .flex-prev  {
+    }
+    .flex-next  {
+        background-position: -36px -4px;
+        &:hover {
+            background-position: -36px -4px;
+        }
+    }
+}
+
+.flex-control-nav {
+    display: none;
+}
+

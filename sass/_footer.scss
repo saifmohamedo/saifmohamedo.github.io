@@ -1,0 +1,43 @@
+/* --------------------------------------------------------------------------------------
++
++ FOOTER
++
+-------------------------------------------------------------------------------------- */
+footer {
+	background-color: $footer-bgr;
+	text-align: center;
+	padding-bottom: 15px;
+	.social {
+		font-size: 0;
+		padding-top: 15px;
+		li {
+			font-size: $base-font-size;
+			@include box(23px);
+			display: inline-block;
+			border: none;
+			// border: 2px solid $border2;
+			@include border-radius(50%);
+			@include background-clip();
+			background-color: #fff;	
+			@include bs;	
+			margin: 0 5px;
+			margin-bottom: 12px;
+			padding: 2px;
+			@include transition(none);
+			&:hover {
+				background-color: $border2;
+				@include box(23px);
+				display: inline-block;
+				border: none;
+			}	
+		}
+		a {
+			@include box(23px);
+			@include transition(none);
+		}
+	}
+	small {
+		font-size: 10px;
+		color: #fff;
+	}
+}

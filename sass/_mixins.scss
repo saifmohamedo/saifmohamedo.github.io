@@ -1,0 +1,77 @@
+/* --------------------------------------------------------------------------------------
++
++ MIXINS
++
+-------------------------------------------------------------------------------------- */
+
+//SELECTED TEXT MIXIN
+@mixin selected-text {
+    ::-moz-selection {
+        background: $selected-text-bgr;
+        color: $selected-text-clr;
+        text-shadow: none;
+    }
+    ::selection {
+        background: $selected-text-bgr;
+        color: $selected-text-clr;
+        text-shadow: none;
+    }
+}
+
+//UNSELECTABLE
+@mixin unselectable {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -o-user-select: none; 
+    user-select: none;
+}
+@mixin box($var) {
+    width: $var;
+    height: $var;
+    display: block;
+}
+
+@mixin t($var) {
+    @include transition(all $var ease);
+}
+
+@mixin borders {
+    @include border-radius($radius);
+    border: 1px solid $border-clr;
+}
+
+@mixin radius {
+    @include border-radius($radius);
+}
+
+
+/* LINE-HIGH */
+@mixin lh($line-height) {
+    height: $line-height;
+    line-height: $line-height;
+}
+
+/* BOX SIZING */
+@mixin box-sizing($bs) {
+  $bs: unquote($bs);
+  @include experimental(box-sizing, $bs, -moz, -webkit, not -o, not -ms, not -khtml, official); 
+}
+@mixin bs {
+    @include box-sizing(border-box);
+}
+
+/* HIDE TEXT*/
+@mixin ht {
+    border: 0;
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+    background-color: transparent;
+}
+@mixin h-t {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+

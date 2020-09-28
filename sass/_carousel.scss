@@ -1,0 +1,156 @@
+/* --------------------------------------------------------------------------------------
++
++ CAROUSEL
++
+-------------------------------------------------------------------------------------- */
+
+.nbs-flexisel-container {
+    position:relative;
+    max-width:100%;
+}
+.nbs-flexisel-ul {
+    position:relative;
+    width:9999px;
+    margin:0px;
+    padding:0px;
+    text-align:center;  
+    li {
+        padding-bottom: 40px;
+    }
+}
+
+.nbs-flexisel-inner {
+    overflow:hidden;
+    width:100%;
+    position: relative;
+    height: 220px;
+    padding-top: 20px;
+    &>div {
+    	@include box(33px);
+    	position: absolute;
+    	top: 205px !important;
+    	left: 50%;
+    	cursor: pointer;
+    	@include bs;
+		border: 4px solid #97b1b1;
+		@include border-radius(17px);
+		@include background-clip();
+		@include background(#d7dddf image-url('arrows.png', false, false) no-repeat -5px -4px);  	
+	    &:hover {
+			@include background(#97b1b1 image-url('arrows.png', false, false) no-repeat -5px -4px);
+	    } 
+    }
+    ul {
+        height: 180px;
+        overflow: hidden;
+    }
+    .nbs-flexisel-nav-left {
+    	margin-left: -48px;
+    }
+    .nbs-flexisel-nav-right {
+    	margin-left: 15px;
+    	background-position: -36px -4px;
+    	&:hover {
+	    	background-position: -36px -4px;
+    	}
+    }
+}
+
+.nbs-flexisel-item {
+    float:left;
+    margin:0px;
+    padding:0px;
+    position:relative;
+    line-height:0px;
+    &:hover {
+        .info {
+            border: 1px solid $border;
+            top: 0px;
+            background-color: #fff;
+            background-color: rgba(255,255,255, .85);
+            @include transition(all .3s linear);
+            h3 {
+                border-bottom: 1px solid $border;
+            }
+            .hidden {
+                visibility: visible;
+                @include opacity(1);
+                line-height: $base-line-height;
+                .ie8 & {
+                    display: block;
+                }
+            }
+        }
+    }
+    .info {
+        width: 150px;
+        margin: 0 auto;
+        padding: 20px;
+        @include border-radius($radius); 
+        @include bs;
+        border: 1px solid transparent;
+        position: absolute;
+        left: 50%;
+        margin-left: -75px;
+        top: 130px;
+        @include transition(all .4s linear);
+        h3 {
+            color: $second-clr;
+            text-transform: uppercase;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        .hidden {
+            visibility: hidden;
+            @include opacity(0);
+            text-align: center;
+            line-height: $base-line-height;
+            .ie8 & {
+                display: none;
+                visibility: visible;
+                @include opacity(1);
+            }
+        }
+        .social {
+            @include box(23px);
+            display: inline-block;
+            border: 2px solid $border2;
+            @include border-radius(50%);
+            @include background-clip();
+            background-color: #fff; 
+            @include bs;
+            @include transition(none);
+            vertical-align: top;
+            margin: 10px 5px 0;
+            @include transition(none);
+            padding: 2px;
+            &:hover {
+                background-color: #fff;
+                @include box(23px);
+                padding: 2px;
+                display: inline-block;
+                border: 2px solid $title-clr;
+            }            
+        }
+    }
+    &>a { 
+        width: 131px;
+        height: 131px;
+        display: block;
+        margin: 0 auto;
+        @include bs;
+        overflow: hidden;
+        border: 2px solid #d8dee0;
+        @include border-radius(68px);
+        @include background-clip();  
+        img {
+            @include border-radius(68px);
+        }   
+    }
+}
+.nbs-flexisel-item img {
+    width: 100%;
+    position: relative;
+}
+
