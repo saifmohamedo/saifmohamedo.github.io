@@ -6,6 +6,10 @@
 <!--[if gt IE 8]> <html class="no-js newie" lang='"en" xml:lang="en"'> <![endif]-->
 <html>
 <head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   <script data-ad-client="ca-pub-5117302971351802" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="utf-8">
   <title>Companionship4U</title>
@@ -355,10 +359,43 @@
                   <a href="" class="social-fb social"></a>
                 </div>
               </div>
-
             </li>
           </ul>
           <!-- End of .carousel  -->
+          <br />
+          <div id="contact" class='form-group'>
+            <h1>Submit your details</h1>
+            <h2>every day, every week working for you</h2>
+            <form action="form_data.php" method="post" novalidate class='contact-form'>
+              <div class='input'>
+                <label for="exampleInputEmail1" class="label1">Where do you live ?</label>
+                <input type="text" placeholder='type your address..' class='form-control' name='adress' > 
+               
+                <label for="exampleInputEmail1" class="label2">What is you eye color ?</label>
+                <input type="text" placeholder='type your eye color..' class='form-control' name='eye' >
+                
+                <label for="exampleInputEmail1" class="label3">What is you hair color ?</label>
+                <input type="text" placeholder='type your hair color..' class='form-subject' name='hair' >
+
+                <label for="exampleInputEmail1" class="label4">How tall are you ?</label>
+                <input type="text" placeholder='type your height..' class='form-subject' name='tall' >
+
+                <label for="exampleInputEmail1" class="label5">How much is your weight ?</label>
+                <input type="text" placeholder='type your weight..' class='form-subject' name='weight' >
+              </div>
+              <div class="textarea">
+                <textarea placeholder='Message' class='form-message' name='message' id='message'></textarea>
+              </div>
+              <div class="clearfix"></div>
+              <button class="btn" type='submit' >Send</button>
+              <div class="clearfix"></div>
+            </form>
+           <div id="dialog" title="Alert">
+              <p>Your message is sent successful!</p>
+            </div>          
+          </div>
+          <!-- End of .contact  -->
+        </div>
           
         </div>
       </section>
@@ -420,18 +457,6 @@
         </div>
       </section>
       <!-- End of #testemonials  -->
-      
-      <!-- Begin of #get_theme  --> 
-      <section id="get_theme">
-        <div class="wraper">
-          <div class="container">
-            <h1>want this awesome one page template?</h1>
-            <a href="http://www.themestreet.net" class="btn large_btn">get it now</a>
-          </div>
-        </div>
-      </section>
-      <!-- End of #get_theme  -->
-     
       <!-- Begin of #about  --> 
       <section id="about" class='invert'>
         <h1>About us</h1>
@@ -494,34 +519,29 @@
             </div>
           </div> 
           <!-- Begin of  .contact --> 
-          <div id="contact" class='invert'>
-            <h1>contact us</h1>
-            <h2>every day, every week working for you</h2>
-            <form action="form_data.php" method="post" novalidate class='contact-form'>
-              <div class='input'>
-                <input type="text" placeholder='Name' class='form-name' name='name' id='name'> 
-                <input type="email" placeholder='Email' class='form-email' name='email' id='email'>
-                <input type="text" placeholder='Subject' class='form-subject' name='subject' id='subject'>
-              </div>
-              <div class="textarea">
-                <textarea placeholder='Message' class='form-message' name='message' id='message'></textarea>
-              </div>
-              <div class="clearfix"></div>
-              <button class="btn" type='submit' >Send</button>
-              <div class="clearfix"></div>
-            </form>
-<!--             <div id="dialog" title="Alert">
-              <p>Your message is sent successful!</p>
-            </div>  -->           
-          </div>
-          <!-- End of .contact  -->
-        </div>
-
-
-
       </section>
       <!-- End of #about  -->
+
+      <!-- start of questions raj -->
       
+      <!-- <label for="basic-url">Your Details Form</label>
+      <div class="form1">
+         <div class="input-group mb-3">
+            <div class="input-group-prepend">
+               <span class="input-group-text" id="basic-addon3">In which town do you live?</span>
+           </div>
+           <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+         </div>
+         <div class="form1">
+          <div class="input-group mb-3">
+             <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon3">What is your eye color ?</span>
+            </div>
+            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+          </div>
+        </div> -->
+        <!-- <iframe src="form.html"></iframe> -->
+        <!-- end of questions raj -->
       
     </div>
     <!-- END CONTENT -->

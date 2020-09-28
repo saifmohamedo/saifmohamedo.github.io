@@ -8,6 +8,32 @@
 + BASIC STYLES
 +
 -------------------------------------------------------------------------------------- */
+
+.label1{
+  font-weight: bold;
+  font-size:17px ;
+  margin-right: 320px;
+}
+.label2{
+  font-weight: bold;
+  font-size:17px ;
+  margin-right: 290px;
+}
+.label3{
+  font-weight: bold;
+  font-size:17px;
+  margin-right: 290px;
+}
+.label4{
+  font-weight: bold;
+  font-size:17px;
+  margin-right: 330px;
+}
+.label5{
+  font-weight: bold;
+  font-size:17px;
+  margin-right: 260px;
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -423,7 +449,7 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  border: 2px solid #d8dee0;
+  border: 1.5px solid #01afe9;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -498,10 +524,6 @@ input[type="radio"] {
 .radio span.girl {
   width: 16px;
   background: url('../images/girl.png') no-repeat 0 0;
-}
-
-.input, .textarea {
-  position: relative;
 }
 
 label.error {
