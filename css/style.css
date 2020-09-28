@@ -415,6 +415,7 @@ ul.disc li:before {
   padding: 0 20px;
   font-size: 14px;
   font-weight: bold;
+  margin-right: 860px;
 }
 .btn:hover {
   background: #d0004c;
