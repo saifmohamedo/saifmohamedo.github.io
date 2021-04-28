@@ -1,0 +1,2 @@
+(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[874],{7244:function(t,a,e){"use strict";e.d(a,{ib2:function(){return u}});var r=e(1046);function u(t){return(0,r.w_)({tag:"svg",attr:{viewBox:"0 0 24 24"},child:[{tag:"path",attr:{d:"M4 6H20V8H4zM4 11H20V13H4zM4 16H20V18H4z"}}]})(t)}}}]);
+//# sourceMappingURL=1a48c3c1-d9b1537ba9b10a58b577.js.map
