@@ -7,4 +7,4 @@
 ![Chat Application](https://i.ibb.co/XZYFzmK/Screenshot-4.png)
 ![Chat Application](https://i.ibb.co/GWwMM2y/Screenshot-5.png)
 ## Introduction
-This is a code repository for the corresponding video tutorial. In this video, we will create a full Realtime Chat Application
+This is a code repository for my live site hosted by github not for a specific project
