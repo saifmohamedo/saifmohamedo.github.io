@@ -1,4 +1,4 @@
-# Realtime Chat Application
+# MEGA DEV
 
 ### [Live Site](https://saifmohamedo.github.io)
 
